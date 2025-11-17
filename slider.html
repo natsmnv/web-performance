@@ -14,6 +14,7 @@
     />
     <!-- EXTERNAL LINKS -->
     <script
+      defer
       src="http://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
@@ -60,7 +61,7 @@
       <div id="containerSlider">
         <div id="slidingImage">
           <!-- https://res.cloudinary.com/dbfn5lnvx/image/upload/v1760721348/fh-salzburg/web-performance/img1.png -->
-          <img src="img/img2.png" loading="lazy" alt="image1" />
+          <img src="img/img1.png" alt="image1" />
         </div>
         <div id="slidingImage">
           <!-- https://res.cloudinary.com/dbfn5lnvx/image/upload/v1760721347/fh-salzburg/web-performance/img2.png -->
@@ -68,17 +69,17 @@
         </div>
         <div id="slidingImage">
           <!-- https://res.cloudinary.com/dbfn5lnvx/image/upload/v1760721348/fh-salzburg/web-performance/img3.png -->
-          <img src="img/img3.png" alt="image3" />
+          <img src="img/img3.png" loading="lazy" alt="image3" />
         </div>
         <div id="slidingImage">
           <!-- https://res.cloudinary.com/dbfn5lnvx/image/upload/v1760721348/fh-salzburg/web-performance/img4.png -->
-          <img src="img/img4.png" alt="image4" />
+          <img src="img/img4.png" loading="lazy" alt="image4" />
         </div>
       </div>
     </section>
   </body>
   <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js”></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script>
     $(document).ready(function () {
       $("#containerSlider").slick({
