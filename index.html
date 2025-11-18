@@ -15,10 +15,6 @@
     />
     <!-- header links -->
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=1234567890"
-    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -54,6 +50,13 @@
         text-align: center;
         padding-top: 100px;
         box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(4, 100%);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+      }
+      .slidingImage {
+        scroll-snap-align: start;
       }
       #containerSlider img {
         width: 100%;
@@ -425,9 +428,21 @@
   <!-- slider JS ENDS -->
 
   <!-- content JS -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=1234567890"
-  ></script>
+  <script>
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=1234567890";
+    script.async = true;
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    setTimeout(() => {
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      gtag("js", new Date());
+      gtag("config", "TAG_ID");
+    }, 2000);
+  </script>
   <script src="content.js" type="module"></script>
 </html>
